@@ -35,15 +35,11 @@ def main():
             dfs(room+1,number,roomlist)       
 
   
-
+    # argv from input.
     file_name, arg1, arg2= sys.argv
-    mono = int (arg1)
+    mono = int (arg1) # convert to int 
     room = int (arg2)
-    #print("mono :", type(mono))
-    #print("room :", room)
-    
-    #mono = 5
-    #room = 2
+   
     monolist=[]
     roomlist=[]
 
@@ -52,9 +48,9 @@ def main():
         monolist.append(x+1)   
     for x in range(room):
         roomlist.append([])
-    #print("labels we have: ",monolist)
+    # create a unvisited list to store the next sequence of not placed number
     unvisited = [0]*mono
-    #print("initial roomlist", roomlist)
+    
     for i in range(len(monolist)):
         #print(" monolist index : ", i)
         #print(" mololist[i] = ", monolist[i])
